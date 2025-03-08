@@ -1,42 +1,18 @@
 package com.saucedemo.tests;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
+import com.saucedemo.pages.InventoryPage;
+import com.saucedemo.pages.LoginPage;
 import org.testng.Assert;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-import java.time.Duration;
-
-public class LoginTest {
-    private WebDriver driver;
-
-    @BeforeMethod
-    public void setUp() {
-        driver = new ChromeDriver();
-        driver.manage().window().maximize();
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
-        driver.get("https://www.saucedemo.com/");
-    }
+public class LoginTest extends BaseTest{
 
     @Test
-    public void testValidLogin() throws InterruptedException {
-        driver.findElement(By.id("user-name")).sendKeys("standard_user");
-        driver.findElement(By.id("password")).sendKeys("secret_sauce");
-        driver.findElement(By.id("login-button")).click();
+    public void testValidLogin(){
+        LoginPage loginPage = new LoginPage(driver);
+        loginPage.login("standard_user", "secret_sauce");
 
-        WebElement inventoryPage = driver.findElement(By.className("inventory_list"));
-        Assert.assertTrue(inventoryPage.isDisplayed(), "Login failed!");
-        Thread.sleep(3000);
-    }
-
-    @AfterMethod
-    public void tearDown() {
-        if (driver != null) {
-            driver.quit();
-        }
+        InventoryPage inventoryPage = new InventoryPage(driver);
+        Assert.assertTrue(inventoryPage.isInventoryDisplayed(), "Login failed!");
     }
 }
