@@ -13,18 +13,24 @@ import org.testng.annotations.BeforeMethod;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.Properties;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 public class BaseTest {
     protected WebDriver driver;
     protected Properties config;
+    private static final Logger logger = LogManager.getLogger(BaseTest.class);
 
     @BeforeMethod
     public void setup() throws IOException {
+        logger.info("Launching the test environment...");
         config = new Properties();
         FileInputStream fis = new FileInputStream("src/test/resources/config.properties");
         config.load(fis);
 
         String browser = config.getProperty("browser");
+
+        logger.info("Selected browser: " + browser);
         switch (browser.toLowerCase()) {
             case "firefox":
                 FirefoxOptions firefoxOptions = new FirefoxOptions();
@@ -45,12 +51,14 @@ public class BaseTest {
 
         driver.manage().window().maximize();
         driver.get(config.getProperty("baseUrl"));
+        logger.info("URL to navigate to: " + config.getProperty("baseUrl"));
 
     }
 
     @AfterMethod
     public void tearDown() {
         if(driver != null){
+            logger.info("Closing the browser...");
             driver.quit();
         }
     }
