@@ -12,13 +12,18 @@ public class LoginTest extends BaseTest{
     @Test
     public void testValidLogin(){
         logger.info("Launching test: testValidLogin");
+        test.info("Launching test: testValidLogin");
 
         LoginPage loginPage = new LoginPage(driver);
         loginPage.login("standard_user", "secret_sauce");
+
         logger.info("Logged in user: standard_user");
+        test.info("Logged in user: standard_user");
 
         InventoryPage inventoryPage = new InventoryPage(driver);
         Assert.assertTrue(inventoryPage.isInventoryDisplayed(), "Login failed!");
+
         logger.info("Test successful: User is logged in!");
+        test.info("Test successful: User is logged in!");
     }
 }
