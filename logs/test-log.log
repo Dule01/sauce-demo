@@ -5,3 +5,16 @@
 2025-03-09 09:16:23 [main] INFO  LoginTest - Logged in user: standard_user
 2025-03-09 09:16:23 [main] INFO  LoginTest - Test successful: User is logged in!
 2025-03-09 09:16:23 [main] INFO  BaseTest - Closing the browser...
+2025-03-10 22:44:17 [main] INFO  BaseTest - Launching the test environment...
+2025-03-10 22:44:17 [main] INFO  BaseTest - Selected browser: edge
+2025-03-10 22:44:19 [main] INFO  BaseTest - URL to navigate to: https://www.saucedemo.com/
+2025-03-10 22:44:19 [main] INFO  LoginTest - Launching test: testValidLogin
+2025-03-10 22:44:19 [main] INFO  LoginTest - Logged in user: standard_user
+2025-03-10 22:44:19 [main] INFO  LoginTest - Test successful: User is logged in!
+2025-03-10 22:44:19 [main] INFO  BaseTest - Closing the browser...
+2025-03-10 22:56:58 [main] INFO  BaseTest - Launching the test environment...
+2025-03-10 22:56:58 [main] INFO  BaseTest - Selected browser: edge
+2025-03-10 22:56:59 [main] INFO  BaseTest - URL to navigate to: https://www.saucedemo.com/
+2025-03-10 22:56:59 [main] INFO  LoginTest - Launching test: testValidLogin
+2025-03-10 22:56:59 [main] INFO  LoginTest - Logged in user: standard_user
+2025-03-10 22:56:59 [main] INFO  BaseTest - Closing the browser...
