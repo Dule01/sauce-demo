@@ -18,3 +18,35 @@
 2025-03-10 22:56:59 [main] INFO  LoginTest - Launching test: testValidLogin
 2025-03-10 22:56:59 [main] INFO  LoginTest - Logged in user: standard_user
 2025-03-10 22:56:59 [main] INFO  BaseTest - Closing the browser...
+2025-03-11 19:48:48 [main] INFO  BaseTest - Launching the test environment...
+2025-03-11 19:48:48 [main] INFO  BaseTest - Selected browser: edge
+2025-03-11 19:48:49 [main] INFO  BaseTest - URL to navigate to: https://www.saucedemo.com/
+2025-03-11 19:48:49 [main] INFO  LoginTest - Launching test: testValidLogin
+2025-03-11 19:48:50 [main] INFO  LoginTest - Logged in user: standard_user
+2025-03-11 19:48:50 [main] ERROR BaseTest - Test failed: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":".inventory_list"}
+  (Session info: MicrosoftEdge=134.0.3124.51)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.21.0', revision: '79ed462ef4'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.14'
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Command: [9e6fbda67e439ca00f9caa9b7038a1d8, findElement {value=inventory_list, using=class name}]
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 134.0.3124.51, fedcm:accounts: true, ms:edgeOptions: {debuggerAddress: localhost:58722}, msedge: {msedgedriverVersion: 134.0.3124.51 (10e0bb621722..., userDataDir: C:\Users\simic\AppData\Loca...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:58722/devtoo..., se:cdpVersion: 134.0.3124.51, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 9e6fbda67e439ca00f9caa9b7038a1d8
+2025-03-11 19:48:50 [main] INFO  ScreenshotUtils - Screenshot saved at: screenshots/testValidLogin_2025-03-11_19-48-50.png
+2025-03-11 19:48:50 [main] INFO  BaseTest - Closing the browser...
+2025-03-11 19:57:12 [main] INFO  BaseTest - Launching the test environment...
+2025-03-11 19:57:12 [main] INFO  BaseTest - Selected browser: edge
+2025-03-11 19:57:14 [main] INFO  BaseTest - URL to navigate to: https://www.saucedemo.com/
+2025-03-11 19:57:14 [main] INFO  LoginTest - Launching test: testValidLogin
+2025-03-11 19:57:14 [main] INFO  LoginTest - Logged in user: standard_user
+2025-03-11 19:57:14 [main] ERROR BaseTest - Test failed: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":".inventory_list"}
+  (Session info: MicrosoftEdge=134.0.3124.51)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.21.0', revision: '79ed462ef4'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.14'
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Command: [6b27f3268f054c558445fe3ae904362f, findElement {value=inventory_list, using=class name}]
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 134.0.3124.51, fedcm:accounts: true, ms:edgeOptions: {debuggerAddress: localhost:59172}, msedge: {msedgedriverVersion: 134.0.3124.51 (10e0bb621722..., userDataDir: C:\Users\simic\AppData\Loca...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:59172/devtoo..., se:cdpVersion: 134.0.3124.51, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 6b27f3268f054c558445fe3ae904362f
+2025-03-11 19:57:14 [main] INFO  ScreenshotUtils - Screenshot saved at: screenshots/testValidLogin_2025-03-11_19-57-14.png
+2025-03-11 19:57:14 [main] INFO  BaseTest - Closing the browser...

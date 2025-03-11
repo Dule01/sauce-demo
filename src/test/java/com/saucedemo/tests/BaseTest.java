@@ -2,7 +2,9 @@ package com.saucedemo.tests;
 
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.MediaEntityBuilder;
 import com.saucedemo.reports.ExtentManager;
+import com.saucedemo.utils.ScreenshotUtils;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -18,6 +20,7 @@ import org.testng.annotations.BeforeMethod;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.Properties;
+
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.testng.annotations.BeforeSuite;
@@ -30,7 +33,7 @@ public class BaseTest {
     protected static ExtentTest test;
 
     @BeforeSuite
-    public void setupExtentReports(){
+    public void setupExtentReports() {
         extent = ExtentManager.getInstance();
     }
 
@@ -72,21 +75,29 @@ public class BaseTest {
 
     @AfterMethod
     public void tearDown(ITestResult result) {
-        if(result.getStatus() == ITestResult.FAILURE){
+        if (result.getStatus() == ITestResult.FAILURE) {
+            logger.error("Test failed: " + result.getThrowable());
             test.fail("Test failed: " + result.getThrowable());
-        } else if (result.getStatus() == ITestResult.SUCCESS){
+
+            // Getting screenshot
+            String screenshotPath = ScreenshotUtils.captureScreenshot(driver, result.getName());
+
+            // Add screenshot to Extent Report
+            test.fail("Screenshot: ", MediaEntityBuilder.createScreenCaptureFromPath("../" + screenshotPath).build());
+
+        } else if (result.getStatus() == ITestResult.SUCCESS) {
             test.pass("Test passed");
         } else {
             test.skip("Test skipped");
         }
-        if(driver != null){
+        if (driver != null) {
             logger.info("Closing the browser...");
             driver.quit();
         }
     }
 
     @AfterSuite
-    public void flushReports(){
+    public void flushReports() {
         ExtentManager.flushReports();
     }
 

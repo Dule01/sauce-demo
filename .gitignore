@@ -44,5 +44,9 @@ logs/
 *.log
 
 # Reports (Extent Reports)
-reports/
+/reports/
+!src/test/java/com/saucedemo/reports/
+
+# Screenshots folder
+/screenshots/
 
