@@ -86,7 +86,7 @@ public class BaseTest {
             test.fail("Screenshot: ", MediaEntityBuilder.createScreenCaptureFromPath("../" + screenshotPath).build());
 
         } else if (result.getStatus() == ITestResult.SUCCESS) {
-            test.pass("Test passed");
+            test.pass("Test successful!");
         } else {
             test.skip("Test skipped");
         }

@@ -40,8 +40,7 @@ build/
 Thumbs.db
 
 # Logs
-logs/
-*.log
+/logs/
 
 # Reports (Extent Reports)
 /reports/
