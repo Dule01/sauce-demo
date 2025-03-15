@@ -7,7 +7,6 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class LoginPage extends BasePage{
-    private WebDriverWait wdWait;
     private WebDriverUtils utils;
 
     public LoginPage(WebDriver driver) {

@@ -28,4 +28,11 @@ public class DataProviders {
                 {"standard_user", "wrong_password", true},
         };
     }
+
+    @DataProvider(name = "wrongUsernameLoginData")
+    public static Object[][] getWrongUsernameLoginData(){
+        return new Object[][]{
+                {"wrong_username", "secret_sauce", true},
+        };
+    }
 }

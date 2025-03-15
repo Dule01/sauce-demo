@@ -7,6 +7,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
+import java.util.List;
 import java.util.NoSuchElementException;
 
 public class WebDriverUtils {
@@ -20,6 +21,10 @@ public class WebDriverUtils {
 
     public WebElement waitForElementToBeVisible(WebElement element) {
         return webDriverWait.until(ExpectedConditions.visibilityOf(element));
+    }
+
+    public List<WebElement> waitForElementsToBeVisible(List<WebElement> elements){
+        return  webDriverWait.until(ExpectedConditions.visibilityOfAllElements(elements));
     }
 
     public WebElement waitForElementToBeClickable(WebElement element) {

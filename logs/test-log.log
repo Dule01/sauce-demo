@@ -171,3 +171,437 @@ Session ID: af2d194ca748dc1c5f8ffa15cb2861bc
 2025-03-13 17:37:40 [main] INFO  LoginTestWrongPassword - Launching test: testWrongPasswordLogin
 2025-03-13 17:37:40 [main] INFO  LoginTestWrongPassword - Tried to login with an incorrect password...
 2025-03-13 17:37:40 [main] INFO  BaseTest - Closing the browser...
+2025-03-15 09:46:04 [main] INFO  BaseTest - Launching the test environment...
+2025-03-15 09:46:04 [main] INFO  BaseTest - Selected browser: edge
+2025-03-15 09:46:07 [main] INFO  BaseTest - URL to navigate to: https://www.saucedemo.com/
+2025-03-15 09:46:07 [main] INFO  LoginTestWrongUsername - Launching test: testWrongUsernameLogin
+2025-03-15 09:46:07 [main] INFO  LoginTestWrongUsername - Tried to login with an incorrect username...
+2025-03-15 09:46:07 [main] INFO  BaseTest - Closing the browser...
+2025-03-15 10:10:07 [main] INFO  BaseTest - Launching the test environment...
+2025-03-15 10:10:07 [main] INFO  BaseTest - Selected browser: edge
+2025-03-15 10:10:16 [main] INFO  BaseTest - URL to navigate to: https://www.saucedemo.com/
+2025-03-15 10:10:16 [main] INFO  AddToCartFromHomepage - Launching test: addToCartFromHomepage
+2025-03-15 10:10:16 [main] INFO  AddToCartFromHomepage - Logged in user: standard_user
+2025-03-15 10:10:16 [main] INFO  BaseTest - Closing the browser...
+2025-03-15 10:10:51 [main] INFO  BaseTest - Launching the test environment...
+2025-03-15 10:10:51 [main] INFO  BaseTest - Selected browser: edge
+2025-03-15 10:10:52 [main] INFO  BaseTest - URL to navigate to: https://www.saucedemo.com/
+2025-03-15 10:10:52 [main] INFO  AddToCartFromHomepage - Launching test: addToCartFromHomepage
+2025-03-15 10:10:52 [main] INFO  AddToCartFromHomepage - Logged in user: standard_user
+2025-03-15 10:10:52 [main] INFO  BaseTest - Closing the browser...
+2025-03-15 10:28:31 [main] INFO  BaseTest - Launching the test environment...
+2025-03-15 10:28:31 [main] INFO  BaseTest - Selected browser: edge
+2025-03-15 10:28:32 [main] INFO  BaseTest - URL to navigate to: https://www.saucedemo.com/
+2025-03-15 10:28:32 [main] INFO  AddToCartFromHomepage - Launching test: addToCartFromHomepage
+2025-03-15 10:28:33 [main] INFO  AddToCartFromHomepage - Logged in user: standard_user
+2025-03-15 10:28:33 [main] INFO  BaseTest - Closing the browser...
+2025-03-15 10:28:50 [main] INFO  BaseTest - Launching the test environment...
+2025-03-15 10:28:50 [main] INFO  BaseTest - Selected browser: edge
+2025-03-15 10:28:52 [main] INFO  BaseTest - URL to navigate to: https://www.saucedemo.com/
+2025-03-15 10:28:52 [main] INFO  AddToCartFromHomepage - Launching test: addToCartFromHomepage
+2025-03-15 10:28:52 [main] INFO  AddToCartFromHomepage - Logged in user: standard_user
+2025-03-15 10:28:55 [main] INFO  BaseTest - Closing the browser...
+2025-03-15 10:37:15 [main] INFO  BaseTest - Launching the test environment...
+2025-03-15 10:37:15 [main] INFO  BaseTest - Selected browser: edge
+2025-03-15 10:37:17 [main] INFO  BaseTest - URL to navigate to: https://www.saucedemo.com/
+2025-03-15 10:37:17 [main] INFO  AddToCartFromHomepage - Launching test: addToCartFromHomepage
+2025-03-15 10:37:17 [main] INFO  AddToCartFromHomepage - Logged in user: standard_user
+2025-03-15 10:37:17 [main] INFO  BaseTest - Closing the browser...
+2025-03-15 10:42:35 [main] INFO  BaseTest - Launching the test environment...
+2025-03-15 10:42:35 [main] INFO  BaseTest - Selected browser: edge
+2025-03-15 10:42:37 [main] INFO  BaseTest - URL to navigate to: https://www.saucedemo.com/
+2025-03-15 10:42:37 [main] INFO  AddToCartFromHomepage - Launching test: addToCartFromHomepage
+2025-03-15 10:42:37 [main] INFO  AddToCartFromHomepage - Logged in user: standard_user
+2025-03-15 10:42:37 [main] INFO  InventoryPage - Total Add To Cart buttons: 6
+2025-03-15 10:42:37 [main] INFO  InventoryPage - Index of the selected Add To Cart button: 3
+2025-03-15 10:42:37 [main] INFO  InventoryPage - Product name added to the cart: Sauce Labs Fleece Jacket
+2025-03-15 10:42:37 [main] INFO  BaseTest - Closing the browser...
+2025-03-15 10:46:58 [main] INFO  BaseTest - Launching the test environment...
+2025-03-15 10:46:58 [main] INFO  BaseTest - Selected browser: edge
+2025-03-15 10:46:59 [main] INFO  BaseTest - URL to navigate to: https://www.saucedemo.com/
+2025-03-15 10:46:59 [main] INFO  AddToCartFromHomepage - Launching test: addToCartFromHomepage
+2025-03-15 10:46:59 [main] INFO  AddToCartFromHomepage - Logged in user: standard_user
+2025-03-15 10:46:59 [main] INFO  InventoryPage - Total Add To Cart buttons: 6
+2025-03-15 10:46:59 [main] INFO  InventoryPage - Index of the selected Add To Cart button: 5
+2025-03-15 10:46:59 [main] INFO  InventoryPage - Product name added to the cart: Test.allTheThings() T-Shirt (Red)
+2025-03-15 10:46:59 [main] INFO  InventoryPage - Product price: $15.99
+2025-03-15 10:46:59 [main] INFO  BaseTest - Closing the browser...
+2025-03-15 10:51:26 [main] INFO  BaseTest - Launching the test environment...
+2025-03-15 10:51:26 [main] INFO  BaseTest - Selected browser: edge
+2025-03-15 10:51:27 [main] INFO  BaseTest - URL to navigate to: https://www.saucedemo.com/
+2025-03-15 10:51:27 [main] INFO  AddToCartFromHomepage - Launching test: addToCartFromHomepage
+2025-03-15 10:51:27 [main] INFO  AddToCartFromHomepage - Logged in user: standard_user
+2025-03-15 10:51:28 [main] INFO  InventoryPage - Total Add To Cart buttons: 6
+2025-03-15 10:51:28 [main] INFO  InventoryPage - Index of the selected Add To Cart button: 1
+2025-03-15 10:51:28 [main] INFO  InventoryPage - Product name added to the cart: Sauce Labs Bike Light
+2025-03-15 10:51:28 [main] INFO  InventoryPage - Product price: $9.99
+2025-03-15 10:51:28 [main] INFO  BaseTest - Closing the browser...
+2025-03-15 11:00:15 [main] INFO  BaseTest - Launching the test environment...
+2025-03-15 11:00:15 [main] INFO  BaseTest - Selected browser: edge
+2025-03-15 11:00:17 [main] INFO  BaseTest - URL to navigate to: https://www.saucedemo.com/
+2025-03-15 11:00:17 [main] INFO  AddToCartFromHomepage - Launching test: addToCartFromHomepage
+2025-03-15 11:00:17 [main] INFO  AddToCartFromHomepage - Logged in user: standard_user
+2025-03-15 11:00:17 [main] INFO  InventoryPage - Total Add To Cart buttons: 6
+2025-03-15 11:00:17 [main] INFO  InventoryPage - Index of the selected Add To Cart button: 1
+2025-03-15 11:00:17 [main] INFO  InventoryPage - Product name added to the cart: Sauce Labs Bike Light
+2025-03-15 11:00:17 [main] INFO  InventoryPage - Product price: $9.99
+2025-03-15 11:00:17 [main] INFO  BaseTest - Closing the browser...
+2025-03-15 11:09:25 [main] INFO  BaseTest - Launching the test environment...
+2025-03-15 11:09:25 [main] INFO  BaseTest - Selected browser: edge
+2025-03-15 11:09:26 [main] INFO  BaseTest - URL to navigate to: https://www.saucedemo.com/
+2025-03-15 11:09:26 [main] INFO  AddToCartFromHomepage - Launching test: addToCartFromHomepage
+2025-03-15 11:09:26 [main] INFO  AddToCartFromHomepage - Logged in user: standard_user
+2025-03-15 11:09:26 [main] INFO  InventoryPage - Total Add To Cart buttons: 6
+2025-03-15 11:09:26 [main] INFO  InventoryPage - Index of the selected Add To Cart button: 3
+2025-03-15 11:09:26 [main] INFO  InventoryPage - Product name added to the cart: Sauce Labs Fleece Jacket
+2025-03-15 11:09:26 [main] INFO  InventoryPage - Product price: $49.99
+2025-03-15 11:09:26 [main] INFO  AddToCartFromHomepage - Selected product: Sauce Labs Fleece Jacket and selected product price is: $49.99
+2025-03-15 11:09:26 [main] INFO  InventoryPage - Total Add To Cart buttons: 6
+2025-03-15 11:09:26 [main] INFO  InventoryPage - Index of the selected Add To Cart button: 2
+2025-03-15 11:09:26 [main] INFO  InventoryPage - Product name added to the cart: Sauce Labs Bolt T-Shirt
+2025-03-15 11:09:26 [main] INFO  InventoryPage - Product price: $15.99
+2025-03-15 11:09:26 [main] ERROR BaseTest - Test failed: java.lang.AssertionError: Number of notification message is incorrect! expected [1] but found [2]
+2025-03-15 11:09:27 [main] INFO  ScreenshotUtils - Screenshot saved at: screenshots/addToCartFromHomepage_2025-03-15_11-09-26.png
+2025-03-15 11:09:27 [main] INFO  BaseTest - Closing the browser...
+2025-03-15 11:10:06 [main] INFO  BaseTest - Launching the test environment...
+2025-03-15 11:10:06 [main] INFO  BaseTest - Selected browser: edge
+2025-03-15 11:10:08 [main] INFO  BaseTest - URL to navigate to: https://www.saucedemo.com/
+2025-03-15 11:10:08 [main] INFO  AddToCartFromHomepage - Launching test: addToCartFromHomepage
+2025-03-15 11:10:08 [main] INFO  AddToCartFromHomepage - Logged in user: standard_user
+2025-03-15 11:10:08 [main] INFO  InventoryPage - Total Add To Cart buttons: 6
+2025-03-15 11:10:08 [main] INFO  InventoryPage - Index of the selected Add To Cart button: 6
+2025-03-15 11:10:08 [main] ERROR BaseTest - Test failed: java.lang.IndexOutOfBoundsException: Index 6 out of bounds for length 6
+2025-03-15 11:10:08 [main] INFO  ScreenshotUtils - Screenshot saved at: screenshots/addToCartFromHomepage_2025-03-15_11-10-08.png
+2025-03-15 11:10:08 [main] INFO  BaseTest - Closing the browser...
+2025-03-15 11:10:57 [main] INFO  BaseTest - Launching the test environment...
+2025-03-15 11:10:57 [main] INFO  BaseTest - Selected browser: edge
+2025-03-15 11:10:58 [main] INFO  BaseTest - URL to navigate to: https://www.saucedemo.com/
+2025-03-15 11:10:58 [main] INFO  AddToCartFromHomepage - Launching test: addToCartFromHomepage
+2025-03-15 11:10:59 [main] INFO  AddToCartFromHomepage - Logged in user: standard_user
+2025-03-15 11:10:59 [main] INFO  InventoryPage - Total Add To Cart buttons: 6
+2025-03-15 11:10:59 [main] INFO  InventoryPage - Index of the selected Add To Cart button: 5
+2025-03-15 11:10:59 [main] INFO  InventoryPage - Product name added to the cart: Test.allTheThings() T-Shirt (Red)
+2025-03-15 11:10:59 [main] INFO  InventoryPage - Product price: $15.99
+2025-03-15 11:10:59 [main] INFO  AddToCartFromHomepage - Selected product: Test.allTheThings() T-Shirt (Red) and selected product price is: $15.99
+2025-03-15 11:10:59 [main] INFO  InventoryPage - Total Add To Cart buttons: 6
+2025-03-15 11:10:59 [main] INFO  InventoryPage - Index of the selected Add To Cart button: 2
+2025-03-15 11:10:59 [main] INFO  InventoryPage - Product name added to the cart: Sauce Labs Bolt T-Shirt
+2025-03-15 11:10:59 [main] INFO  InventoryPage - Product price: $15.99
+2025-03-15 11:10:59 [main] ERROR BaseTest - Test failed: java.lang.AssertionError: Number of notification message is incorrect! expected [1] but found [2]
+2025-03-15 11:10:59 [main] INFO  ScreenshotUtils - Screenshot saved at: screenshots/addToCartFromHomepage_2025-03-15_11-10-59.png
+2025-03-15 11:10:59 [main] INFO  BaseTest - Closing the browser...
+2025-03-15 11:12:14 [main] INFO  BaseTest - Launching the test environment...
+2025-03-15 11:12:14 [main] INFO  BaseTest - Selected browser: edge
+2025-03-15 11:12:15 [main] INFO  BaseTest - URL to navigate to: https://www.saucedemo.com/
+2025-03-15 11:12:15 [main] INFO  AddToCartFromHomepage - Launching test: addToCartFromHomepage
+2025-03-15 11:12:15 [main] INFO  AddToCartFromHomepage - Logged in user: standard_user
+2025-03-15 11:12:15 [main] INFO  InventoryPage - Total Add To Cart buttons: 6
+2025-03-15 11:12:15 [main] INFO  InventoryPage - Index of the selected Add To Cart button: 0
+2025-03-15 11:12:15 [main] INFO  InventoryPage - Product name added to the cart: Sauce Labs Backpack
+2025-03-15 11:12:15 [main] INFO  InventoryPage - Product price: $29.99
+2025-03-15 11:12:15 [main] INFO  AddToCartFromHomepage - Selected product: Sauce Labs Backpack and selected product price is: $29.99
+2025-03-15 11:12:15 [main] INFO  InventoryPage - Total Add To Cart buttons: 6
+2025-03-15 11:12:15 [main] INFO  InventoryPage - Index of the selected Add To Cart button: 5
+2025-03-15 11:12:15 [main] INFO  InventoryPage - Product name added to the cart: Test.allTheThings() T-Shirt (Red)
+2025-03-15 11:12:15 [main] INFO  InventoryPage - Product price: $15.99
+2025-03-15 11:12:15 [main] ERROR BaseTest - Test failed: java.lang.AssertionError: Number of notification message is incorrect! expected [1] but found [2]
+2025-03-15 11:12:16 [main] INFO  ScreenshotUtils - Screenshot saved at: screenshots/addToCartFromHomepage_2025-03-15_11-12-15.png
+2025-03-15 11:12:16 [main] INFO  BaseTest - Closing the browser...
+2025-03-15 11:12:56 [main] INFO  BaseTest - Launching the test environment...
+2025-03-15 11:12:56 [main] INFO  BaseTest - Selected browser: chrome
+2025-03-15 11:12:59 [main] INFO  BaseTest - URL to navigate to: https://www.saucedemo.com/
+2025-03-15 11:12:59 [main] INFO  AddToCartFromHomepage - Launching test: addToCartFromHomepage
+2025-03-15 11:12:59 [main] INFO  AddToCartFromHomepage - Logged in user: standard_user
+2025-03-15 11:12:59 [main] INFO  InventoryPage - Total Add To Cart buttons: 6
+2025-03-15 11:12:59 [main] INFO  InventoryPage - Index of the selected Add To Cart button: 0
+2025-03-15 11:12:59 [main] INFO  InventoryPage - Product name added to the cart: Sauce Labs Backpack
+2025-03-15 11:12:59 [main] INFO  InventoryPage - Product price: $29.99
+2025-03-15 11:12:59 [main] INFO  AddToCartFromHomepage - Selected product: Sauce Labs Backpack and selected product price is: $29.99
+2025-03-15 11:12:59 [main] INFO  InventoryPage - Total Add To Cart buttons: 6
+2025-03-15 11:12:59 [main] INFO  InventoryPage - Index of the selected Add To Cart button: 2
+2025-03-15 11:12:59 [main] INFO  InventoryPage - Product name added to the cart: Sauce Labs Bolt T-Shirt
+2025-03-15 11:12:59 [main] INFO  InventoryPage - Product price: $15.99
+2025-03-15 11:12:59 [main] ERROR BaseTest - Test failed: java.lang.AssertionError: Number of notification message is incorrect! expected [1] but found [2]
+2025-03-15 11:13:00 [main] INFO  ScreenshotUtils - Screenshot saved at: screenshots/addToCartFromHomepage_2025-03-15_11-12-59.png
+2025-03-15 11:13:00 [main] INFO  BaseTest - Closing the browser...
+2025-03-15 11:13:54 [main] INFO  BaseTest - Launching the test environment...
+2025-03-15 11:13:54 [main] INFO  BaseTest - Selected browser: chrome
+2025-03-15 11:13:55 [main] INFO  BaseTest - URL to navigate to: https://www.saucedemo.com/
+2025-03-15 11:13:55 [main] INFO  AddToCartFromHomepage - Launching test: addToCartFromHomepage
+2025-03-15 11:13:55 [main] INFO  AddToCartFromHomepage - Logged in user: standard_user
+2025-03-15 11:13:55 [main] INFO  InventoryPage - Total Add To Cart buttons: 6
+2025-03-15 11:13:55 [main] INFO  InventoryPage - Index of the selected Add To Cart button: 4
+2025-03-15 11:13:55 [main] INFO  InventoryPage - Product name added to the cart: Sauce Labs Onesie
+2025-03-15 11:13:55 [main] INFO  InventoryPage - Product price: $7.99
+2025-03-15 11:13:55 [main] INFO  AddToCartFromHomepage - Selected product: Sauce Labs Onesie and selected product price is: $7.99
+2025-03-15 11:13:55 [main] INFO  InventoryPage - Total Add To Cart buttons: 6
+2025-03-15 11:13:55 [main] INFO  InventoryPage - Index of the selected Add To Cart button: 4
+2025-03-15 11:13:55 [main] INFO  InventoryPage - Product name added to the cart: Sauce Labs Onesie
+2025-03-15 11:13:55 [main] INFO  InventoryPage - Product price: $7.99
+2025-03-15 11:13:58 [main] ERROR BaseTest - Test failed: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":".shopping_cart_badge"}
+  (Session info: chrome=134.0.6998.89)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.21.0', revision: '79ed462ef4'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.14'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [5424ea3774263a32dc3d1f31d506dc07, findElement {value=shopping_cart_badge, using=class name}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 134.0.6998.89, chrome: {chromedriverVersion: 134.0.6998.88 (7e3d5c978c6d..., userDataDir: C:\Users\simic\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51511}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51511/devtoo..., se:cdpVersion: 134.0.6998.89, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 5424ea3774263a32dc3d1f31d506dc07
+2025-03-15 11:13:58 [main] INFO  ScreenshotUtils - Screenshot saved at: screenshots/addToCartFromHomepage_2025-03-15_11-13-58.png
+2025-03-15 11:13:58 [main] INFO  BaseTest - Closing the browser...
+2025-03-15 11:14:27 [main] INFO  BaseTest - Launching the test environment...
+2025-03-15 11:14:27 [main] INFO  BaseTest - Selected browser: chrome
+2025-03-15 11:14:28 [main] INFO  BaseTest - URL to navigate to: https://www.saucedemo.com/
+2025-03-15 11:14:28 [main] INFO  AddToCartFromHomepage - Launching test: addToCartFromHomepage
+2025-03-15 11:14:28 [main] INFO  AddToCartFromHomepage - Logged in user: standard_user
+2025-03-15 11:14:28 [main] INFO  InventoryPage - Total Add To Cart buttons: 6
+2025-03-15 11:14:28 [main] INFO  InventoryPage - Index of the selected Add To Cart button: 0
+2025-03-15 11:14:28 [main] INFO  InventoryPage - Product name added to the cart: Sauce Labs Backpack
+2025-03-15 11:14:28 [main] INFO  InventoryPage - Product price: $29.99
+2025-03-15 11:14:28 [main] INFO  AddToCartFromHomepage - Selected product: Sauce Labs Backpack and selected product price is: $29.99
+2025-03-15 11:14:28 [main] INFO  InventoryPage - Total Add To Cart buttons: 6
+2025-03-15 11:14:28 [main] INFO  InventoryPage - Index of the selected Add To Cart button: 4
+2025-03-15 11:14:28 [main] INFO  InventoryPage - Product name added to the cart: Sauce Labs Onesie
+2025-03-15 11:14:28 [main] INFO  InventoryPage - Product price: $7.99
+2025-03-15 11:14:28 [main] ERROR BaseTest - Test failed: java.lang.AssertionError: Number of notification message is incorrect! expected [1] but found [2]
+2025-03-15 11:14:28 [main] INFO  ScreenshotUtils - Screenshot saved at: screenshots/addToCartFromHomepage_2025-03-15_11-14-28.png
+2025-03-15 11:14:28 [main] INFO  BaseTest - Closing the browser...
+2025-03-15 11:15:01 [main] INFO  BaseTest - Launching the test environment...
+2025-03-15 11:15:01 [main] INFO  BaseTest - Selected browser: chrome
+2025-03-15 11:15:02 [main] INFO  BaseTest - URL to navigate to: https://www.saucedemo.com/
+2025-03-15 11:15:02 [main] INFO  AddToCartFromHomepage - Launching test: addToCartFromHomepage
+2025-03-15 11:15:02 [main] INFO  AddToCartFromHomepage - Logged in user: standard_user
+2025-03-15 11:15:02 [main] INFO  InventoryPage - Total Add To Cart buttons: 6
+2025-03-15 11:15:02 [main] INFO  InventoryPage - Index of the selected Add To Cart button: 5
+2025-03-15 11:15:02 [main] INFO  InventoryPage - Product name added to the cart: Test.allTheThings() T-Shirt (Red)
+2025-03-15 11:15:02 [main] INFO  InventoryPage - Product price: $15.99
+2025-03-15 11:15:02 [main] INFO  AddToCartFromHomepage - Selected product: Test.allTheThings() T-Shirt (Red) and selected product price is: $15.99
+2025-03-15 11:15:02 [main] INFO  InventoryPage - Total Add To Cart buttons: 6
+2025-03-15 11:15:02 [main] INFO  InventoryPage - Index of the selected Add To Cart button: 1
+2025-03-15 11:15:03 [main] INFO  InventoryPage - Product name added to the cart: Sauce Labs Bike Light
+2025-03-15 11:15:03 [main] INFO  InventoryPage - Product price: $9.99
+2025-03-15 11:15:06 [main] ERROR BaseTest - Test failed: java.lang.AssertionError: Number of notification message is incorrect! expected [1] but found [2]
+2025-03-15 11:15:06 [main] INFO  ScreenshotUtils - Screenshot saved at: screenshots/addToCartFromHomepage_2025-03-15_11-15-06.png
+2025-03-15 11:15:06 [main] INFO  BaseTest - Closing the browser...
+2025-03-15 11:16:35 [main] INFO  BaseTest - Launching the test environment...
+2025-03-15 11:16:35 [main] INFO  BaseTest - Selected browser: chrome
+2025-03-15 11:16:36 [main] INFO  BaseTest - URL to navigate to: https://www.saucedemo.com/
+2025-03-15 11:16:36 [main] INFO  AddToCartFromHomepage - Launching test: addToCartFromHomepage
+2025-03-15 11:16:36 [main] INFO  AddToCartFromHomepage - Logged in user: standard_user
+2025-03-15 11:16:36 [main] INFO  InventoryPage - Total Add To Cart buttons: 6
+2025-03-15 11:16:36 [main] INFO  InventoryPage - Index of the selected Add To Cart button: 5
+2025-03-15 11:16:37 [main] INFO  InventoryPage - Product name added to the cart: Test.allTheThings() T-Shirt (Red)
+2025-03-15 11:16:37 [main] INFO  InventoryPage - Product price: $15.99
+2025-03-15 11:16:37 [main] INFO  AddToCartFromHomepage - Selected product: Test.allTheThings() T-Shirt (Red) and selected product price is: $15.99
+2025-03-15 11:16:37 [main] INFO  InventoryPage - Total Add To Cart buttons: 6
+2025-03-15 11:16:37 [main] INFO  InventoryPage - Index of the selected Add To Cart button: 2
+2025-03-15 11:16:37 [main] INFO  InventoryPage - Product name added to the cart: Sauce Labs Bolt T-Shirt
+2025-03-15 11:16:37 [main] INFO  InventoryPage - Product price: $15.99
+2025-03-15 11:16:40 [main] ERROR BaseTest - Test failed: java.lang.AssertionError: expected [Sauce Labs Bolt T-Shirt] but found [$15.99]
+2025-03-15 11:16:40 [main] INFO  ScreenshotUtils - Screenshot saved at: screenshots/addToCartFromHomepage_2025-03-15_11-16-40.png
+2025-03-15 11:16:40 [main] INFO  BaseTest - Closing the browser...
+2025-03-15 11:17:10 [main] INFO  BaseTest - Launching the test environment...
+2025-03-15 11:17:10 [main] INFO  BaseTest - Selected browser: chrome
+2025-03-15 11:17:11 [main] INFO  BaseTest - URL to navigate to: https://www.saucedemo.com/
+2025-03-15 11:17:11 [main] INFO  AddToCartFromHomepage - Launching test: addToCartFromHomepage
+2025-03-15 11:17:12 [main] INFO  AddToCartFromHomepage - Logged in user: standard_user
+2025-03-15 11:17:12 [main] INFO  InventoryPage - Total Add To Cart buttons: 6
+2025-03-15 11:17:12 [main] INFO  InventoryPage - Index of the selected Add To Cart button: 3
+2025-03-15 11:17:12 [main] INFO  InventoryPage - Product name added to the cart: Sauce Labs Fleece Jacket
+2025-03-15 11:17:12 [main] INFO  InventoryPage - Product price: $49.99
+2025-03-15 11:17:12 [main] INFO  AddToCartFromHomepage - Selected product: Sauce Labs Fleece Jacket and selected product price is: $49.99
+2025-03-15 11:17:12 [main] INFO  InventoryPage - Total Add To Cart buttons: 6
+2025-03-15 11:17:12 [main] INFO  InventoryPage - Index of the selected Add To Cart button: 2
+2025-03-15 11:17:12 [main] INFO  InventoryPage - Product name added to the cart: Sauce Labs Bolt T-Shirt
+2025-03-15 11:17:12 [main] INFO  InventoryPage - Product price: $15.99
+2025-03-15 11:17:15 [main] ERROR BaseTest - Test failed: java.lang.AssertionError: Number of notification message is incorrect! expected [1] but found [2]
+2025-03-15 11:17:16 [main] INFO  ScreenshotUtils - Screenshot saved at: screenshots/addToCartFromHomepage_2025-03-15_11-17-15.png
+2025-03-15 11:17:16 [main] INFO  BaseTest - Closing the browser...
+2025-03-15 11:17:20 [main] INFO  BaseTest - Launching the test environment...
+2025-03-15 11:17:20 [main] INFO  BaseTest - Selected browser: chrome
+2025-03-15 11:17:21 [main] INFO  BaseTest - URL to navigate to: https://www.saucedemo.com/
+2025-03-15 11:17:21 [main] INFO  AddToCartFromHomepage - Launching test: addToCartFromHomepage
+2025-03-15 11:17:21 [main] INFO  AddToCartFromHomepage - Logged in user: standard_user
+2025-03-15 11:17:21 [main] INFO  InventoryPage - Total Add To Cart buttons: 6
+2025-03-15 11:17:21 [main] INFO  InventoryPage - Index of the selected Add To Cart button: 4
+2025-03-15 11:17:21 [main] INFO  InventoryPage - Product name added to the cart: Sauce Labs Onesie
+2025-03-15 11:17:21 [main] INFO  InventoryPage - Product price: $7.99
+2025-03-15 11:17:21 [main] INFO  AddToCartFromHomepage - Selected product: Sauce Labs Onesie and selected product price is: $7.99
+2025-03-15 11:17:21 [main] INFO  InventoryPage - Total Add To Cart buttons: 6
+2025-03-15 11:17:21 [main] INFO  InventoryPage - Index of the selected Add To Cart button: 0
+2025-03-15 11:17:21 [main] INFO  InventoryPage - Product name added to the cart: Sauce Labs Backpack
+2025-03-15 11:17:21 [main] INFO  InventoryPage - Product price: $29.99
+2025-03-15 11:17:25 [main] ERROR BaseTest - Test failed: java.lang.AssertionError: Number of notification message is incorrect! expected [1] but found [2]
+2025-03-15 11:17:25 [main] INFO  ScreenshotUtils - Screenshot saved at: screenshots/addToCartFromHomepage_2025-03-15_11-17-25.png
+2025-03-15 11:17:25 [main] INFO  BaseTest - Closing the browser...
+2025-03-15 11:17:36 [main] INFO  BaseTest - Launching the test environment...
+2025-03-15 11:17:36 [main] INFO  BaseTest - Selected browser: chrome
+2025-03-15 11:17:37 [main] INFO  BaseTest - URL to navigate to: https://www.saucedemo.com/
+2025-03-15 11:17:37 [main] INFO  AddToCartFromHomepage - Launching test: addToCartFromHomepage
+2025-03-15 11:17:37 [main] INFO  AddToCartFromHomepage - Logged in user: standard_user
+2025-03-15 11:17:37 [main] INFO  InventoryPage - Total Add To Cart buttons: 6
+2025-03-15 11:17:37 [main] INFO  InventoryPage - Index of the selected Add To Cart button: 5
+2025-03-15 11:17:37 [main] INFO  InventoryPage - Product name added to the cart: Test.allTheThings() T-Shirt (Red)
+2025-03-15 11:17:37 [main] INFO  InventoryPage - Product price: $15.99
+2025-03-15 11:17:37 [main] INFO  AddToCartFromHomepage - Selected product: Test.allTheThings() T-Shirt (Red) and selected product price is: $15.99
+2025-03-15 11:17:37 [main] INFO  InventoryPage - Total Add To Cart buttons: 6
+2025-03-15 11:17:37 [main] INFO  InventoryPage - Index of the selected Add To Cart button: 4
+2025-03-15 11:17:37 [main] INFO  InventoryPage - Product name added to the cart: Sauce Labs Onesie
+2025-03-15 11:17:37 [main] INFO  InventoryPage - Product price: $7.99
+2025-03-15 11:17:41 [main] ERROR BaseTest - Test failed: java.lang.AssertionError: Number of notification message is incorrect! expected [1] but found [2]
+2025-03-15 11:17:41 [main] INFO  ScreenshotUtils - Screenshot saved at: screenshots/addToCartFromHomepage_2025-03-15_11-17-41.png
+2025-03-15 11:17:41 [main] INFO  BaseTest - Closing the browser...
+2025-03-15 11:21:13 [main] INFO  BaseTest - Launching the test environment...
+2025-03-15 11:21:13 [main] INFO  BaseTest - Selected browser: chrome
+2025-03-15 11:21:14 [main] INFO  BaseTest - URL to navigate to: https://www.saucedemo.com/
+2025-03-15 11:21:14 [main] INFO  AddToCartFromHomepage - Clearing cookies before running the test...
+2025-03-15 11:21:14 [main] INFO  AddToCartFromHomepage - Launching test: addToCartFromHomepage
+2025-03-15 11:21:14 [main] INFO  AddToCartFromHomepage - Logged in user: standard_user
+2025-03-15 11:21:15 [main] INFO  InventoryPage - Total Add To Cart buttons: 6
+2025-03-15 11:21:15 [main] INFO  InventoryPage - Index of the selected Add To Cart button: 5
+2025-03-15 11:21:15 [main] INFO  InventoryPage - Product name added to the cart: Test.allTheThings() T-Shirt (Red)
+2025-03-15 11:21:15 [main] INFO  InventoryPage - Product price: $15.99
+2025-03-15 11:21:15 [main] INFO  AddToCartFromHomepage - Selected product: Test.allTheThings() T-Shirt (Red) and selected product price is: $15.99
+2025-03-15 11:21:15 [main] INFO  InventoryPage - Total Add To Cart buttons: 6
+2025-03-15 11:21:15 [main] INFO  InventoryPage - Index of the selected Add To Cart button: 0
+2025-03-15 11:21:15 [main] INFO  InventoryPage - Product name added to the cart: Sauce Labs Backpack
+2025-03-15 11:21:15 [main] INFO  InventoryPage - Product price: $29.99
+2025-03-15 11:21:18 [main] ERROR BaseTest - Test failed: java.lang.AssertionError: Number of notification message is incorrect! expected [1] but found [2]
+2025-03-15 11:21:18 [main] INFO  ScreenshotUtils - Screenshot saved at: screenshots/addToCartFromHomepage_2025-03-15_11-21-18.png
+2025-03-15 11:21:18 [main] INFO  BaseTest - Closing the browser...
+2025-03-15 11:46:18 [main] INFO  BaseTest - Launching the test environment...
+2025-03-15 11:46:18 [main] INFO  BaseTest - Selected browser: chrome
+2025-03-15 11:46:20 [main] INFO  BaseTest - URL to navigate to: https://www.saucedemo.com/
+2025-03-15 11:46:20 [main] INFO  AddToCartFromHomepage - Clearing cookies before running the test...
+2025-03-15 11:46:20 [main] INFO  AddToCartFromHomepage - Launching test: addToCartFromHomepage
+2025-03-15 11:46:20 [main] INFO  AddToCartFromHomepage - Logged in user: standard_user
+2025-03-15 11:46:20 [main] INFO  InventoryPage - Total Add To Cart buttons: 6
+2025-03-15 11:46:20 [main] INFO  InventoryPage - Index of the selected Add To Cart button: 2
+2025-03-15 11:46:20 [main] INFO  InventoryPage - Product name added to the cart: Sauce Labs Bolt T-Shirt
+2025-03-15 11:46:20 [main] INFO  InventoryPage - Product price: $15.99
+2025-03-15 11:46:20 [main] INFO  AddToCartFromHomepage - Selected product: Sauce Labs Bolt T-Shirt and selected product price is: $15.99
+2025-03-15 11:46:20 [main] INFO  InventoryPage - Total Add To Cart buttons: 6
+2025-03-15 11:46:20 [main] INFO  InventoryPage - Index of the selected Add To Cart button: 5
+2025-03-15 11:46:20 [main] INFO  InventoryPage - Product name added to the cart: Test.allTheThings() T-Shirt (Red)
+2025-03-15 11:46:20 [main] INFO  InventoryPage - Product price: $15.99
+2025-03-15 11:46:24 [main] ERROR BaseTest - Test failed: java.lang.AssertionError: Number of notification message is incorrect! expected [1] but found [2]
+2025-03-15 11:46:24 [main] INFO  ScreenshotUtils - Screenshot saved at: screenshots/addToCartFromHomepage_2025-03-15_11-46-24.png
+2025-03-15 11:46:24 [main] INFO  BaseTest - Closing the browser...
+2025-03-15 11:49:12 [main] INFO  BaseTest - Launching the test environment...
+2025-03-15 11:49:12 [main] INFO  BaseTest - Selected browser: chrome
+2025-03-15 11:49:13 [main] INFO  BaseTest - URL to navigate to: https://www.saucedemo.com/
+2025-03-15 11:49:13 [main] INFO  AddToCartFromHomepage - Clearing cookies before running the test...
+2025-03-15 11:49:13 [main] INFO  AddToCartFromHomepage - Launching test: addToCartFromHomepage
+2025-03-15 11:49:13 [main] INFO  AddToCartFromHomepage - Logged in user: standard_user
+2025-03-15 11:49:13 [main] INFO  InventoryPage - Total Add To Cart buttons: 6
+2025-03-15 11:49:13 [main] INFO  InventoryPage - Index of the selected Add To Cart button: 3
+2025-03-15 11:49:14 [main] INFO  InventoryPage - Product name added to the cart: Sauce Labs Fleece Jacket
+2025-03-15 11:49:14 [main] INFO  InventoryPage - Product price: $49.99
+2025-03-15 11:49:14 [main] INFO  AddToCartFromHomepage - Selected product: Sauce Labs Fleece Jacket and selected product price is: $49.99
+2025-03-15 11:49:14 [main] INFO  InventoryPage - Total Add To Cart buttons: 6
+2025-03-15 11:49:14 [main] INFO  InventoryPage - Index of the selected Add To Cart button: 4
+2025-03-15 11:49:14 [main] INFO  InventoryPage - Product name added to the cart: Sauce Labs Onesie
+2025-03-15 11:49:14 [main] INFO  InventoryPage - Product price: $7.99
+2025-03-15 11:49:17 [main] INFO  BaseTest - Closing the browser...
+2025-03-15 11:49:54 [main] INFO  BaseTest - Launching the test environment...
+2025-03-15 11:49:54 [main] INFO  BaseTest - Selected browser: chrome
+2025-03-15 11:49:55 [main] INFO  BaseTest - URL to navigate to: https://www.saucedemo.com/
+2025-03-15 11:49:55 [main] INFO  AddToCartFromHomepage - Clearing cookies before running the test...
+2025-03-15 11:49:55 [main] INFO  AddToCartFromHomepage - Launching test: addToCartFromHomepage
+2025-03-15 11:49:55 [main] INFO  AddToCartFromHomepage - Logged in user: standard_user
+2025-03-15 11:49:55 [main] INFO  InventoryPage - Total Add To Cart buttons: 6
+2025-03-15 11:49:55 [main] INFO  InventoryPage - Index of the selected Add To Cart button: 4
+2025-03-15 11:49:55 [main] INFO  InventoryPage - Product name added to the cart: Sauce Labs Onesie
+2025-03-15 11:49:55 [main] INFO  InventoryPage - Product price: $7.99
+2025-03-15 11:49:55 [main] INFO  AddToCartFromHomepage - Selected product: Sauce Labs Onesie and selected product price is: $7.99
+2025-03-15 11:49:55 [main] INFO  InventoryPage - Total Add To Cart buttons: 6
+2025-03-15 11:49:55 [main] INFO  InventoryPage - Index of the selected Add To Cart button: 1
+2025-03-15 11:49:55 [main] INFO  InventoryPage - Product name added to the cart: Sauce Labs Bike Light
+2025-03-15 11:49:55 [main] INFO  InventoryPage - Product price: $9.99
+2025-03-15 11:49:59 [main] INFO  BaseTest - Closing the browser...
+2025-03-15 11:50:12 [main] INFO  BaseTest - Launching the test environment...
+2025-03-15 11:50:12 [main] INFO  BaseTest - Selected browser: chrome
+2025-03-15 11:50:13 [main] INFO  BaseTest - URL to navigate to: https://www.saucedemo.com/
+2025-03-15 11:50:13 [main] INFO  AddToCartFromHomepage - Clearing cookies before running the test...
+2025-03-15 11:50:13 [main] INFO  AddToCartFromHomepage - Launching test: addToCartFromHomepage
+2025-03-15 11:50:13 [main] INFO  AddToCartFromHomepage - Logged in user: standard_user
+2025-03-15 11:50:13 [main] INFO  InventoryPage - Total Add To Cart buttons: 6
+2025-03-15 11:50:13 [main] INFO  InventoryPage - Index of the selected Add To Cart button: 2
+2025-03-15 11:50:13 [main] INFO  InventoryPage - Product name added to the cart: Sauce Labs Bolt T-Shirt
+2025-03-15 11:50:13 [main] INFO  InventoryPage - Product price: $15.99
+2025-03-15 11:50:13 [main] INFO  AddToCartFromHomepage - Selected product: Sauce Labs Bolt T-Shirt and selected product price is: $15.99
+2025-03-15 11:50:14 [main] INFO  InventoryPage - Total Add To Cart buttons: 6
+2025-03-15 11:50:14 [main] INFO  InventoryPage - Index of the selected Add To Cart button: 3
+2025-03-15 11:50:14 [main] INFO  InventoryPage - Product name added to the cart: Sauce Labs Fleece Jacket
+2025-03-15 11:50:14 [main] INFO  InventoryPage - Product price: $49.99
+2025-03-15 11:50:17 [main] INFO  BaseTest - Closing the browser...
+2025-03-15 11:50:25 [main] INFO  BaseTest - Launching the test environment...
+2025-03-15 11:50:25 [main] INFO  BaseTest - Selected browser: chrome
+2025-03-15 11:50:26 [main] INFO  BaseTest - URL to navigate to: https://www.saucedemo.com/
+2025-03-15 11:50:26 [main] INFO  AddToCartFromHomepage - Clearing cookies before running the test...
+2025-03-15 11:50:26 [main] INFO  AddToCartFromHomepage - Launching test: addToCartFromHomepage
+2025-03-15 11:50:26 [main] INFO  AddToCartFromHomepage - Logged in user: standard_user
+2025-03-15 11:50:26 [main] INFO  InventoryPage - Total Add To Cart buttons: 6
+2025-03-15 11:50:26 [main] INFO  InventoryPage - Index of the selected Add To Cart button: 5
+2025-03-15 11:50:26 [main] INFO  InventoryPage - Product name added to the cart: Test.allTheThings() T-Shirt (Red)
+2025-03-15 11:50:26 [main] INFO  InventoryPage - Product price: $15.99
+2025-03-15 11:50:26 [main] INFO  AddToCartFromHomepage - Selected product: Test.allTheThings() T-Shirt (Red) and selected product price is: $15.99
+2025-03-15 11:50:26 [main] INFO  InventoryPage - Total Add To Cart buttons: 6
+2025-03-15 11:50:26 [main] INFO  InventoryPage - Index of the selected Add To Cart button: 3
+2025-03-15 11:50:27 [main] INFO  InventoryPage - Product name added to the cart: Sauce Labs Fleece Jacket
+2025-03-15 11:50:27 [main] INFO  InventoryPage - Product price: $49.99
+2025-03-15 11:50:30 [main] INFO  BaseTest - Closing the browser...
+2025-03-15 11:50:35 [main] INFO  BaseTest - Launching the test environment...
+2025-03-15 11:50:35 [main] INFO  BaseTest - Selected browser: chrome
+2025-03-15 11:50:36 [main] INFO  BaseTest - URL to navigate to: https://www.saucedemo.com/
+2025-03-15 11:50:36 [main] INFO  AddToCartFromHomepage - Clearing cookies before running the test...
+2025-03-15 11:50:36 [main] INFO  AddToCartFromHomepage - Launching test: addToCartFromHomepage
+2025-03-15 11:50:37 [main] INFO  AddToCartFromHomepage - Logged in user: standard_user
+2025-03-15 11:50:37 [main] INFO  InventoryPage - Total Add To Cart buttons: 6
+2025-03-15 11:50:37 [main] INFO  InventoryPage - Index of the selected Add To Cart button: 2
+2025-03-15 11:50:37 [main] INFO  InventoryPage - Product name added to the cart: Sauce Labs Bolt T-Shirt
+2025-03-15 11:50:37 [main] INFO  InventoryPage - Product price: $15.99
+2025-03-15 11:50:37 [main] INFO  AddToCartFromHomepage - Selected product: Sauce Labs Bolt T-Shirt and selected product price is: $15.99
+2025-03-15 11:50:37 [main] INFO  InventoryPage - Total Add To Cart buttons: 6
+2025-03-15 11:50:37 [main] INFO  InventoryPage - Index of the selected Add To Cart button: 4
+2025-03-15 11:50:37 [main] INFO  InventoryPage - Product name added to the cart: Sauce Labs Onesie
+2025-03-15 11:50:37 [main] INFO  InventoryPage - Product price: $7.99
+2025-03-15 11:50:40 [main] INFO  BaseTest - Closing the browser...
+2025-03-15 11:52:22 [main] INFO  BaseTest - Launching the test environment...
+2025-03-15 11:52:22 [main] INFO  BaseTest - Selected browser: chrome
+2025-03-15 11:52:23 [main] INFO  BaseTest - URL to navigate to: https://www.saucedemo.com/
+2025-03-15 11:52:23 [main] INFO  AddToCartFromHomepage - Clearing cookies before running the test...
+2025-03-15 11:52:23 [main] INFO  AddToCartFromHomepage - Launching test: addToCartFromHomepage
+2025-03-15 11:52:24 [main] INFO  AddToCartFromHomepage - Logged in user: standard_user
+2025-03-15 11:52:24 [main] INFO  InventoryPage - Total Add To Cart buttons: 6
+2025-03-15 11:52:24 [main] INFO  InventoryPage - Index of the selected Add To Cart button: 5
+2025-03-15 11:52:24 [main] INFO  InventoryPage - Product name added to the cart: Test.allTheThings() T-Shirt (Red)
+2025-03-15 11:52:24 [main] INFO  InventoryPage - Product price: $15.99
+2025-03-15 11:52:24 [main] INFO  AddToCartFromHomepage - Selected product: Test.allTheThings() T-Shirt (Red) and selected product price is: $15.99
+2025-03-15 11:52:24 [main] INFO  InventoryPage - Total Add To Cart buttons: 6
+2025-03-15 11:52:24 [main] INFO  InventoryPage - Index of the selected Add To Cart button: 3
+2025-03-15 11:52:24 [main] INFO  InventoryPage - Product name added to the cart: Sauce Labs Fleece Jacket
+2025-03-15 11:52:24 [main] INFO  InventoryPage - Product price: $49.99
+2025-03-15 11:52:27 [main] INFO  BaseTest - Closing the browser...
+2025-03-15 11:56:08 [main] INFO  BaseTest - Launching the test environment...
+2025-03-15 11:56:08 [main] INFO  BaseTest - Selected browser: chrome
+2025-03-15 11:56:09 [main] INFO  BaseTest - URL to navigate to: https://www.saucedemo.com/
+2025-03-15 11:56:09 [main] INFO  AddToCartFromHomepage - Launching test: addToCartFromHomepage
+2025-03-15 11:56:09 [main] INFO  AddToCartFromHomepage - Logged in user: standard_user
+2025-03-15 11:56:10 [main] INFO  InventoryPage - Total Add To Cart buttons: 6
+2025-03-15 11:56:10 [main] INFO  InventoryPage - Index of the selected Add To Cart button: 0
+2025-03-15 11:56:10 [main] INFO  InventoryPage - Product name added to the cart: Sauce Labs Backpack
+2025-03-15 11:56:10 [main] INFO  InventoryPage - Product price: $29.99
+2025-03-15 11:56:10 [main] INFO  AddToCartFromHomepage - Selected product: Sauce Labs Backpack and selected product price is: $29.99
+2025-03-15 11:56:10 [main] INFO  BaseTest - Closing the browser...
+2025-03-15 12:02:09 [main] INFO  BaseTest - Launching the test environment...
+2025-03-15 12:02:09 [main] INFO  BaseTest - Selected browser: chrome
+2025-03-15 12:02:12 [main] INFO  BaseTest - URL to navigate to: https://www.saucedemo.com/
+2025-03-15 12:02:12 [main] INFO  AddToCartFromHomepage - Launching test: addToCartFromHomepage
+2025-03-15 12:02:12 [main] INFO  AddToCartFromHomepage - Logged in user: standard_user
+2025-03-15 12:02:12 [main] INFO  InventoryPage - Total Add To Cart buttons: 6
+2025-03-15 12:02:12 [main] INFO  InventoryPage - Index of the selected Add To Cart button: 4
+2025-03-15 12:02:12 [main] INFO  InventoryPage - Product name added to the cart: Sauce Labs Onesie
+2025-03-15 12:02:12 [main] INFO  InventoryPage - Product price: $7.99
+2025-03-15 12:02:12 [main] INFO  AddToCartFromHomepage - Selected product: Sauce Labs Onesie and selected product price is: $7.99
+2025-03-15 12:02:12 [main] INFO  BaseTest - Closing the browser...
