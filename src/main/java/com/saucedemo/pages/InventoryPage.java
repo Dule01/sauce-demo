@@ -67,6 +67,29 @@ public class InventoryPage extends BasePage{
         return productDetails;
     }
 
+    public Map<String, String> clickOnAnyProduct(){
+        utils.waitForElementsToBeVisible(productNames);
+
+        int totalItems = productNames.size();
+        logger.info("Total items: {}", totalItems);
+
+        int randomItem = TestDatUtils.getRandomNumber(0, totalItems - 1);
+        logger.info("Index of the selected item: {}", randomItem);
+
+        String selectedProduct = returnProductName(randomItem);
+        String selectedProductPrice = returnProductPrice(randomItem);
+        logger.info("Product item added to the cart: {}", selectedProduct);
+        logger.info("Product item price: {}", selectedProductPrice);
+
+        productNames.get(randomItem).click();
+
+        Map<String, String> productDetails = new HashMap<>();
+        productDetails.put("name", selectedProduct);
+        productDetails.put("price", selectedProductPrice);
+
+        return productDetails;
+    }
+
     @FindBy(className = "shopping_cart_badge")
     public WebElement shoppingCartNotificationBadge;
 
