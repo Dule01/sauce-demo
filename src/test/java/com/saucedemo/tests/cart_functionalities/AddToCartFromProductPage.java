@@ -1,8 +1,9 @@
-package com.saucedemo.tests.add_to_cart;
+package com.saucedemo.tests.cart_functionalities;
 
 import com.saucedemo.pages.CartPage;
 import com.saucedemo.pages.InventoryPage;
 import com.saucedemo.pages.LoginPage;
+import com.saucedemo.pages.ProductDetailsPage;
 import com.saucedemo.tests.BaseTest;
 import com.saucedemo.utils.DataProviders;
 import org.apache.logging.log4j.LogManager;
@@ -12,11 +13,11 @@ import org.testng.annotations.Test;
 
 import java.util.Map;
 
-public class AddToCartFromHomepage extends BaseTest {
-    private static final Logger logger = LogManager.getLogger(AddToCartFromHomepage.class);
+public class AddToCartFromProductPage extends BaseTest {
+    private static final Logger logger = LogManager.getLogger(AddToCartFromProductPage.class);
 
     @Test(dataProvider = "successfulLoginData", dataProviderClass = DataProviders.class)
-    public void addToCartFromHomepage(String username, String password, boolean expectedSuccess) {
+    public void addToCartFromProductPage(String username, String password){
         logger.info("Launching test: addToCartFromHomepage");
         test.info("Launching test: addToCartFromHomepage");
 
@@ -27,11 +28,21 @@ public class AddToCartFromHomepage extends BaseTest {
         test.info("Logged in user: " + username);
 
         InventoryPage inventoryPage = new InventoryPage(driver);
-        Map<String, String> productDetails = inventoryPage.clickAddToCartOnAnyProduct();
+        Map<String, String> productDetails = inventoryPage.clickOnAnyProduct();
         String selectedProduct = productDetails.get("name");
         String selectedProductPrice = productDetails.get("price");
         logger.info("Selected product: {} and selected product price is: {}", selectedProduct, selectedProductPrice);
         test.info("Selected product: " + selectedProduct + " and selected product price is: " + selectedProductPrice);
+
+        ProductDetailsPage productDetailsPage = new ProductDetailsPage(driver);
+        Assert.assertEquals(productDetailsPage.getProductDetailsName(), selectedProduct);
+        Assert.assertEquals(productDetailsPage.getProductDetailsPrice(), selectedProductPrice);
+        logger.info("Product name and price are matching!");
+        test.info("Product name and price are matching!");
+
+        productDetailsPage.clickAddToCartButton();
+        logger.info("Added product to Cart");
+        test.info("Added product to Cart");
 
         Assert.assertEquals(inventoryPage.getShoppingCartNotificationBadgeNumber(), "1",
                 "No item has been added to the cart!");
@@ -41,6 +52,6 @@ public class AddToCartFromHomepage extends BaseTest {
         Assert.assertEquals(selectedProduct, cartPage.getSelectedProductName());
         Assert.assertTrue(cartPage.isCheckoutButtonDisplayed(), "Checkout button is not visible on the Cart page!");
 
-        test.pass("Product has been added to the cart from the Homepage!");
+        test.pass("Product has been added to the cart from the Product Details page!");
     }
 }

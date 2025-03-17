@@ -13,7 +13,7 @@ public class LoginTestWrongPassword extends BaseTest {
     private static final Logger logger = LogManager.getLogger(LoginTestWrongPassword.class);
 
     @Test(dataProvider = "wrongPasswordLoginData", dataProviderClass = DataProviders.class)
-    public void testWrongPasswordLogin(String username, String password, boolean expectedSuccess){
+    public void testWrongPasswordLogin(String username, String password){
         String expectedErrorMessage = "Epic sadface: Username and password do not match any user in this service";
 
         logger.info("Launching test: testWrongPasswordLogin");

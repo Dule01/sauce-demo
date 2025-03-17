@@ -12,7 +12,7 @@ import org.testng.annotations.Test;
 public class LoginTestSuccessful extends BaseTest {
     private static final Logger logger = LogManager.getLogger(LoginTestSuccessful.class);
 
-    @Test(dataProvider = "successfulLoginData", dataProviderClass = DataProviders.class)
+    @Test(dataProvider = "successfulLoginDataWithBool", dataProviderClass = DataProviders.class)
     public void testValidLogin(String username, String password, boolean expectedSuccess){
         logger.info("Launching test: testValidLogin for the user: " + username);
         test.info("Launching test: testValidLogin for the user: " + username);
