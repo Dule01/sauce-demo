@@ -3,11 +3,13 @@ package com.saucedemo.pages;
 import com.saucedemo.utils.WebDriverUtils;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
 import java.util.List;
+import java.util.NoSuchElementException;
 
 public class CartPage extends BasePage{
     private static final Logger logger = LogManager.getLogger(CartPage.class);
@@ -56,5 +58,23 @@ public class CartPage extends BasePage{
             logger.warn("Cart is NOT empty! There's {} products", cartItems.size());
             return false;
         }
+    }
+
+    public boolean isNumberOfProductsVisible() {
+        List<WebElement> badgeElements = driver.findElements(By.cssSelector(".shopping_cart_badge"));
+
+        if (badgeElements.isEmpty()) {
+            return false;
+        } else {
+            return badgeElements.get(0).isDisplayed();
+        }
+    }
+
+    @FindBy(id = "continue-shopping")
+    private WebElement continueShoppingButton;
+
+    public void clickContinueShoppingButton(){
+        utils.waitForElementToBeVisible(continueShoppingButton);
+        continueShoppingButton.click();
     }
 }
