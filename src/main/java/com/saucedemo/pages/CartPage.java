@@ -9,7 +9,6 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
 import java.util.List;
-import java.util.NoSuchElementException;
 
 public class CartPage extends BasePage{
     private static final Logger logger = LogManager.getLogger(CartPage.class);
@@ -26,9 +25,6 @@ public class CartPage extends BasePage{
     public String getSelectedProductName(){
         return selectedProductName.getText();
     }
-
-    @FindBy(id = "checkout")
-    private WebElement checkoutButton;
 
     public boolean isCheckoutButtonDisplayed(){
         return utils.isElementVisible(checkoutButton);
@@ -76,5 +72,13 @@ public class CartPage extends BasePage{
     public void clickContinueShoppingButton(){
         utils.waitForElementToBeVisible(continueShoppingButton);
         continueShoppingButton.click();
+    }
+
+    @FindBy(id = "checkout")
+    private WebElement checkoutButton;
+
+    public void clickCheckoutButton(){
+        utils.waitForElementToBeVisible(checkoutButton);
+        checkoutButton.click();
     }
 }
