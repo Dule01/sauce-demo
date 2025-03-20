@@ -93,6 +93,11 @@ public class InventoryPage extends BasePage{
     @FindBy(className = "shopping_cart_badge")
     public WebElement shoppingCartNotificationBadge;
 
+    public void clickShoppingCartNotificationBadge(){
+        utils.waitForElementToBeVisible(shoppingCartNotificationBadge);
+        shoppingCartNotificationBadge.click();
+    }
+
     public String getShoppingCartNotificationBadgeNumber(){
         return shoppingCartNotificationBadge.getText();
     }

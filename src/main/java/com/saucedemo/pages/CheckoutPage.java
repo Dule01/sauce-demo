@@ -94,4 +94,36 @@ public class CheckoutPage extends BasePage{
         backToHomePage.click();
     }
 
+    @FindBy(xpath = "(//div[@class=\"inventory_item_name\"])[1]")
+    private WebElement firstItemInTheCartName;
+
+    public String getFirstItemInTheCartNameText(){
+        utils.waitForElementToBeVisible(firstItemInTheCartName);
+        return firstItemInTheCartName.getText();
+    }
+
+    @FindBy(xpath = "(//div[@class=\"inventory_item_price\"])[1]")
+    private WebElement firstItemInTheCartPrice;
+
+    public String getFirstItemInTheCartPriceText(){
+        utils.waitForElementToBeVisible(firstItemInTheCartPrice);
+        return firstItemInTheCartPrice.getText();
+    }
+
+    @FindBy(xpath = "(//div[@class=\"inventory_item_name\"])[2]")
+    private WebElement secondItemInTheCartName;
+
+    public String geSecondItemInTheCartNameText(){
+        utils.waitForElementToBeVisible(secondItemInTheCartName);
+        return secondItemInTheCartName.getText();
+    }
+
+    @FindBy(xpath = "(//div[@class=\"inventory_item_price\"])[2]")
+    private WebElement secondItemInTheCartPrice;
+
+    public String getSecondItemInTheCartPriceText(){
+        utils.waitForElementToBeVisible(secondItemInTheCartPrice);
+        return secondItemInTheCartPrice.getText();
+    }
+
 }
