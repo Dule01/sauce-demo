@@ -5,82 +5,81 @@ import com.saucedemo.pages.CheckoutPage;
 import com.saucedemo.pages.InventoryPage;
 import com.saucedemo.pages.LoginPage;
 import com.saucedemo.tests.BaseTest;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
+import com.saucedemo.utils.ConfigReader;
+import com.saucedemo.utils.Constants;
+import com.saucedemo.utils.TestData;
+import com.saucedemo.utils.TextUtils;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import java.util.Map;
 
 public class CheckoutSingleProduct extends BaseTest {
-    //TODO tidy up the data in usage
-
-    private static final Logger logger = LogManager.getLogger(CheckoutSingleProduct.class);
 
     @Test
-    public void testCheckoutSingleProduct(){
-        String username = "standard_user";
-        String password = "secret_sauce";
+    public void testCheckoutSingleProduct() {
+        test.info("▶ Starting test: Checkout single product");
 
-        logger.info("Launching test: testCheckoutSingleProduct");
-        test.info("Launching test: testCheckoutSingleProduct");
+        String username = ConfigReader.get("username");
+        String password = ConfigReader.get("password");
 
         LoginPage loginPage = new LoginPage(driver);
-
-        // Making sure that the user is logged in before the test
-        if(!driver.getCurrentUrl().contains("inventory.html")){
-            loginPage.login(username, password);
-            logger.info("Logged in user: {}", username);
-            test.info("Logged in user: " + username);
-        }
+        loginPage.loginIfNotLoggedIn(username, password);
+        test.info("✅ User logged in: " + username);
 
         InventoryPage inventoryPage = new InventoryPage(driver);
         CartPage cartPage = new CartPage(driver);
 
+        // Add product to cart
         Map<String, String> productDetails = inventoryPage.clickAddToCartOnAnyProduct();
         String selectedProduct = productDetails.get("name");
         String selectedProductPrice = productDetails.get("price");
-        logger.info("Selected product: {} and selected product price is: {}", selectedProduct, selectedProductPrice);
-        test.info("Selected product: " + selectedProduct + " and selected product price is: " + selectedProductPrice);
+        test.info("🛒 Product added to cart: " + selectedProduct + " | Price: " + selectedProductPrice);
 
+        // Go to cart
         inventoryPage.shoppingCartNotificationBadge.click();
-        logger.info("User is navigated to the Cart page");
-        test.info("User is navigated to the Cart page");
+        test.info("🧺 Navigated to Cart page");
 
+        // Start checkout
         cartPage.clickCheckoutButton();
-        logger.info("User is navigated to the Checkout page");
-        test.info("User is navigated to the Checkout page");
+        test.info("📦 Navigated to Checkout page");
 
+        // Verify URL
         String checkoutUrl = driver.getCurrentUrl();
-        Assert.assertEquals(checkoutUrl, "https://www.saucedemo.com/checkout-step-one.html");
+        Assert.assertEquals(checkoutUrl, Constants.CHECKOUT_URL);
+        test.info("✅ Checkout URL verified");
 
+        // Fill checkout form
         CheckoutPage checkoutPage = new CheckoutPage(driver);
-        checkoutPage.enterCheckoutDetailsAndContinue("Dusan", "Simic", "12345");
+        checkoutPage.enterCheckoutDetailsAndContinue(
+                TestData.FIRST_NAME,
+                TestData.LAST_NAME,
+                TestData.POSTAL_CODE
+        );
+        test.info("📝 Checkout form filled");
+
+        // Verify product in overview
         Assert.assertEquals(selectedProduct, checkoutPage.getProductNameText());
         Assert.assertEquals(selectedProductPrice, checkoutPage.getProductPriceText());
-        logger.info("User is navigated to the overview on the Checkout page");
-        test.info("User is navigated to the overview on the Checkout page");
+        test.info("🔎 Product and price match in overview");
 
-        selectedProductPrice = selectedProductPrice.replace("$", "");
-        float productPrice = Float.parseFloat(selectedProductPrice);
-        String taxPriceText = checkoutPage.getTaxPriceText().replace("Tax: $", "");
-        float taxPrice = Float.parseFloat(taxPriceText);
-        logger.info("Tax price: {}", taxPrice);
-        test.info("Tax price: " + taxPrice);
-
+        // Verify tax & total
+        float productPrice = TextUtils.dollarToFloat(selectedProductPrice);
+        float taxPrice = TextUtils.extractPrice(checkoutPage.getTaxPriceText());
         float finalTotalPrice = taxPrice + productPrice;
-        logger.info("Total price: {}", finalTotalPrice);
-        test.info("Total price: " + finalTotalPrice);
-        Assert.assertEquals(checkoutPage.getOverviewTotalPriceText(), "Total: $" + finalTotalPrice);
-        logger.info("Total price matched!");
-        test.info("Total price matched!");
 
+        Assert.assertEquals(checkoutPage.getOverviewTotalPriceText(), "Total: $" + finalTotalPrice);
+        test.info("💰 Total price validated: $" + finalTotalPrice);
+
+        // Finish order
         checkoutPage.clickFinishButton();
-        Assert.assertEquals(checkoutPage.getCheckoutCompleteHeaderText(), "Thank you for your order!");
-        Assert.assertEquals(checkoutPage.getCheckoutCompleteDescriptionText(), "Your order has been dispatched, and will arrive just as fast as the pony can get there!");
+        Assert.assertEquals(checkoutPage.getCheckoutCompleteHeaderText(), Constants.CHECKOUT_THANK_YOU_MESSAGE);
+        Assert.assertEquals(checkoutPage.getCheckoutCompleteDescriptionText(), Constants.CHECKOUT_DESCRIPTION_MESSAGE);
+        test.info("🎉 Order completed and confirmation received");
+
+        // Back to homepage
         checkoutPage.clickBackToHomePage();
-        Assert.assertTrue(inventoryPage.isInventoryDisplayed(), "User is not navigated to the Home (inventory) page!");
-        logger.info("Product has been purchased, and the user navigated back to the Homepage!");
-        test.pass("Product has been purchased, and the user navigated back to the Homepage!");
+        Assert.assertTrue(inventoryPage.isInventoryDisplayed(), "❌ User is not navigated to the inventory page!");
+        test.pass("🏁 Product successfully purchased. User navigated back to the Homepage.");
     }
 }

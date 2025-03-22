@@ -1,6 +1,6 @@
 package com.saucedemo.pages;
 
-import com.saucedemo.utils.TestDatUtils;
+import com.saucedemo.utils.TestDataUtils;
 import com.saucedemo.utils.WebDriverUtils;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -51,7 +51,7 @@ public class InventoryPage extends BasePage{
         int totalAddToCartButtons = addToCartButtons.size();
         logger.info("Total Add To Cart buttons: {}", totalAddToCartButtons);
 
-        int randomAddToCartButtonIndex = TestDatUtils.getRandomNumber(0, totalAddToCartButtons - 1);
+        int randomAddToCartButtonIndex = TestDataUtils.getRandomNumber(0, totalAddToCartButtons - 1);
         logger.info("Index of the selected Add To Cart button: {}", randomAddToCartButtonIndex);
 
         addToCartButtons.get(randomAddToCartButtonIndex).click();
@@ -73,7 +73,7 @@ public class InventoryPage extends BasePage{
         int totalItems = productNames.size();
         logger.info("Total items: {}", totalItems);
 
-        int randomItem = TestDatUtils.getRandomNumber(0, totalItems - 1);
+        int randomItem = TestDataUtils.getRandomNumber(0, totalItems - 1);
         logger.info("Index of the selected item: {}", randomItem);
 
         String selectedProduct = returnProductName(randomItem);

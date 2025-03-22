@@ -5,97 +5,90 @@ import com.saucedemo.pages.CheckoutPage;
 import com.saucedemo.pages.InventoryPage;
 import com.saucedemo.pages.LoginPage;
 import com.saucedemo.tests.BaseTest;
+import com.saucedemo.utils.ConfigReader;
+import com.saucedemo.utils.Constants;
+import com.saucedemo.utils.TestData;
+import com.saucedemo.utils.TextUtils;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import java.text.DecimalFormat;
 import java.util.Map;
 
 public class CheckoutMultipleProducts extends BaseTest {
-    //TODO Tidy up data and improve readability by creating proper methods
     private static final Logger logger = LogManager.getLogger(CheckoutMultipleProducts.class);
 
     @Test
     public void testCheckoutMultipleProducts(){
-        String username = "standard_user";
-        String password = "secret_sauce";
+        test.info("▶ Starting test: Checkout multiple products");
 
-        logger.info("Launching test: testCheckoutSingleProduct");
-        test.info("Launching test: testCheckoutSingleProduct");
+        String username = ConfigReader.get("username");
+        String password = ConfigReader.get("password");
 
         LoginPage loginPage = new LoginPage(driver);
-
-        // Making sure that the user is logged in before the test
-        if(!driver.getCurrentUrl().contains("inventory.html")){
-            loginPage.login(username, password);
-            logger.info("Logged in user: {}", username);
-            test.info("Logged in user: " + username);
-        }
+        loginPage.loginIfNotLoggedIn(username, password);
+        test.info("✅ User logged in: " + username);
 
         InventoryPage inventoryPage = new InventoryPage(driver);
         CartPage cartPage = new CartPage(driver);
 
+        // Add first product to cart
         Map<String, String> productDetails = inventoryPage.clickAddToCartOnAnyProduct();
         String selectedProduct = productDetails.get("name");
         String selectedProductPrice = productDetails.get("price");
-        logger.info("Selected product: {} and selected product price is: {}", selectedProduct, selectedProductPrice);
-        test.info("Selected product: " + selectedProduct + " and selected product price is: " + selectedProductPrice);
+        test.info("🛒 First product added to cart: " + selectedProduct + " | Price: " + selectedProductPrice);
 
+        // Add second product to cart
         Map<String, String> secondProductDetails = inventoryPage.clickAddToCartOnAnyProduct();
         String secondSelectedProduct = secondProductDetails.get("name");
         String secondSelectedProductPrice = secondProductDetails.get("price");
-        logger.info("Second selected product: {} and second selected product price is: {}", secondSelectedProduct, secondSelectedProductPrice);
-        test.info("Second selected product: " + secondSelectedProduct + " and selected product price is: " + secondSelectedProductPrice);
+        test.info("🛒 Second product added to cart: " + secondSelectedProduct + " | Price: " + secondSelectedProductPrice);
 
+        // Go to cart
         inventoryPage.clickShoppingCartNotificationBadge();
-        logger.info("User is navigated to the Cart page");
-        test.info("User is navigated to the Cart page");
+        test.info("🧺 Navigated to Cart page");
 
+        // Start checkout
         cartPage.clickCheckoutButton();
-        logger.info("User is navigated to the Checkout page");
-        test.info("User is navigated to the Checkout page");
+        test.info("📦 Navigated to Checkout page");
 
+        // Verify URL
         String checkoutUrl = driver.getCurrentUrl();
-        Assert.assertEquals(checkoutUrl, "https://www.saucedemo.com/checkout-step-one.html");
+        Assert.assertEquals(checkoutUrl, Constants.CHECKOUT_URL);
+        test.info("✅ Checkout URL verified");
 
+        // Fill checkout form
         CheckoutPage checkoutPage = new CheckoutPage(driver);
-        checkoutPage.enterCheckoutDetailsAndContinue("Dusan", "Simic", "12345");
+        checkoutPage.enterCheckoutDetailsAndContinue(TestData.FIRST_NAME, TestData.LAST_NAME, TestData.POSTAL_CODE);
+        test.info("📝 Checkout form filled");
+
+        // Verify products in overview
         Assert.assertEquals(selectedProduct, checkoutPage.getFirstItemInTheCartNameText());
         Assert.assertEquals(selectedProductPrice, checkoutPage.getFirstItemInTheCartPriceText());
         Assert.assertEquals(secondSelectedProduct, checkoutPage.geSecondItemInTheCartNameText());
         Assert.assertEquals(secondSelectedProductPrice, checkoutPage.getSecondItemInTheCartPriceText());
-        logger.info("User is navigated to the overview on the Checkout page");
-        test.info("User is navigated to the overview on the Checkout page");
+        test.info("🔎 Products and price match in overview");
 
-        selectedProductPrice = selectedProductPrice.replace("$", "");
-        float productPrice = Float.parseFloat(selectedProductPrice);
-        secondSelectedProductPrice = secondSelectedProductPrice.replace("$", "");
-        float secondProductPrice = Float.parseFloat(secondSelectedProductPrice);
-        String taxPriceText = checkoutPage.getTaxPriceText().replace("Tax: $", "");
-        float taxPrice = Float.parseFloat(taxPriceText);
-        logger.info("First product price is {}, second product price is {}, tax price is {}", productPrice, secondProductPrice, taxPrice);
-        test.info("First product price is " + productPrice + ", second product price is " + secondProductPrice + ", tax price is " + taxPrice);
+        // Verify tax & total
+        float productPrice = TextUtils.dollarToFloat(selectedProductPrice);
+        float secondProductPrice = TextUtils.dollarToFloat(secondSelectedProductPrice);
+        float taxPrice = TextUtils.extractPrice(checkoutPage.getTaxPriceText());
+        float finalTotalPrice = productPrice + secondProductPrice;
+        finalTotalPrice += taxPrice;
+        Assert.assertEquals(checkoutPage.getOverviewTotalPriceText(), "Total: $" + finalTotalPrice);
+        test.info("💰 Total price validated: $" + finalTotalPrice);
 
-        DecimalFormat df = new DecimalFormat("0.00");
-
-        float finalTotalPrice = taxPrice + productPrice;
-        finalTotalPrice += secondProductPrice;
-        String formattedTotalPrice = "Total: $" + df.format(finalTotalPrice);
-        logger.info("Total price: {}", finalTotalPrice);
-        test.info("Total price: " + finalTotalPrice);
-        Assert.assertEquals(checkoutPage.getOverviewTotalPriceText(), formattedTotalPrice);
-        logger.info("Total price matched!");
-        test.info("Total price matched!");
-
+        // Finish order
         checkoutPage.clickFinishButton();
-        Assert.assertEquals(checkoutPage.getCheckoutCompleteHeaderText(), "Thank you for your order!");
-        Assert.assertEquals(checkoutPage.getCheckoutCompleteDescriptionText(), "Your order has been dispatched, and will arrive just as fast as the pony can get there!");
+        Assert.assertEquals(checkoutPage.getCheckoutCompleteHeaderText(), Constants.CHECKOUT_THANK_YOU_MESSAGE);
+        Assert.assertEquals(checkoutPage.getCheckoutCompleteDescriptionText(), Constants.CHECKOUT_DESCRIPTION_MESSAGE);
+        test.info("🎉 Order completed and confirmation received");
+
+        // Back to homepage
         checkoutPage.clickBackToHomePage();
         Assert.assertTrue(inventoryPage.isInventoryDisplayed(), "User is not navigated to the Home (inventory) page!");
-        logger.info("Products have been purchased, and the user navigated back to the Homepage!");
-        test.pass("Products have been purchased, and the user navigated back to the Homepage!");
+        test.pass("🏁 Products successfully purchased. User navigated back to the Homepage.");
     }
 }
 

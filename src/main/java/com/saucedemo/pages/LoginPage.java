@@ -1,6 +1,8 @@
 package com.saucedemo.pages;
 
 import com.saucedemo.utils.WebDriverUtils;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -8,6 +10,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class LoginPage extends BasePage{
     private WebDriverUtils utils;
+    private static final Logger logger = LogManager.getLogger(LoginPage.class);
 
     public LoginPage(WebDriver driver) {
         super(driver);
@@ -47,5 +50,14 @@ public class LoginPage extends BasePage{
     public String getErrorMessageText(){
         utils.waitForElementToBeVisible(errorMessage);
         return errorMessage.getText();
+    }
+
+    public void loginIfNotLoggedIn(String username, String password){
+        if(!driver.getCurrentUrl().contains("inventory.html")){
+            login(username, password);
+            logger.info("Logged in user: {}", username);
+        } else {
+            logger.info("User already logged in.");
+        }
     }
 }
