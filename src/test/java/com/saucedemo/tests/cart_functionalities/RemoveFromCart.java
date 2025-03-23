@@ -4,43 +4,33 @@ import com.saucedemo.pages.CartPage;
 import com.saucedemo.pages.InventoryPage;
 import com.saucedemo.pages.LoginPage;
 import com.saucedemo.tests.BaseTest;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
+import com.saucedemo.utils.ConfigReader;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class RemoveFromCart extends BaseTest {
-    private static final Logger logger = LogManager.getLogger(RemoveFromCart.class);
 
     @Test
     public void testRemoveFromTheCart(){
-        String username = "standard_user";
-        String password = "secret_sauce";
+        test.info("▶ Starting test: Remove product from the Cart");
 
-        logger.info("Launching test: testRemoveFromTheCart");
-        test.info("Launching test: testRemoveFromTheCart");
+        String username = ConfigReader.get("username");
+        String password = ConfigReader.get("password");
 
         LoginPage loginPage = new LoginPage(driver);
+        loginPage.loginIfNotLoggedIn(username, password);
+        test.info("✅ User logged in: " + username);
 
-        // Making sure that the user is logged in before the test
-        if(!driver.getCurrentUrl().contains("inventory.html")){
-            loginPage.login(username, password);
-            logger.info("Logged in user: {}", username);
-            test.info("Logged in user: " + username);
-        }
-
+        // Add product and navigate to Cart page
         InventoryPage inventoryPage = new InventoryPage(driver);
         CartPage cartPage = new CartPage(driver);
-
         inventoryPage.clickAddToCartOnAnyProduct();
-        inventoryPage.shoppingCartNotificationBadge.click();
-        logger.info("User is navigated to the Cart page");
-        test.info("User is navigated to the Cart page");
+        inventoryPage.clickShoppingCartNotificationBadge();
+        test.info("🛒 Product added to cart and the user navigated to Cart page");;
 
+        // Remove product from the cart
         cartPage.clickRemoveCartButton();
         Assert.assertTrue(cartPage.isCartEmpty(), "Product has not been removed from the list of products!");
-        logger.info("Product is successfully removed from the list of products");
-        test.pass("Product is successfully removed from the list of products");
-
+        test.info("⬅ Product is successfully removed from the list of products");
     }
 }
