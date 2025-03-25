@@ -2,30 +2,23 @@ package com.saucedemo.tests.login;
 
 import com.saucedemo.pages.LoginPage;
 import com.saucedemo.tests.BaseTest;
+import com.saucedemo.utils.Constants;
 import com.saucedemo.utils.DataProviders;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class LoginTestWrongUsername extends BaseTest {
-    private static final Logger logger = LogManager.getLogger(LoginTestWrongUsername.class);
-
     @Test(dataProvider = "wrongUsernameLoginData", dataProviderClass = DataProviders.class)
     public void testWrongUsernameLogin(String username, String password){
-        String expectedErrorMessage = "Epic sadface: Username and password do not match any user in this service";
+        test.info("▶ Starting test: Login with wrong username");
 
-        logger.info("Launching test: testWrongUsernameLogin");
-        test.info("Launching test: testWrongUsernameLogin");
-
+        // Attempt login with an incorrect username
         LoginPage loginPage = new LoginPage(driver);
         loginPage.login(username, password);
+        test.info("💻 Trying to login with an incorrect username...");
 
-        logger.info("Tried to login with an incorrect username...");
-        test.info("Tried to login with an incorrect username...");
-
-        Assert.assertEquals(loginPage.getErrorMessageText(), expectedErrorMessage);
-
-        test.pass("Test passed: correct error message appeared!");
+        // Asserting the error message
+        Assert.assertEquals(loginPage.getErrorMessageText(), Constants.INVALID_LOGIN_EXPECTED_ERROR);
+        test.pass("✅ Login failed! Correct error message appeared");
     }
 }
