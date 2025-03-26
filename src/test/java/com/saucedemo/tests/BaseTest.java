@@ -19,6 +19,7 @@ import org.testng.annotations.BeforeMethod;
 
 import java.io.FileInputStream;
 import java.io.IOException;
+import java.lang.reflect.Method;
 import java.util.Properties;
 
 import org.apache.logging.log4j.LogManager;
@@ -38,8 +39,8 @@ public class BaseTest {
     }
 
     @BeforeMethod
-    public void setup() throws IOException {
-        test = ExtentManager.createTest(this.getClass().getSimpleName());
+    public void setup(Method method) throws IOException {
+        test = ExtentManager.createTest(method.getName());
 
         logger.info("Launching the test environment...");
         config = new Properties();

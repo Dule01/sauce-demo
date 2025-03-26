@@ -126,4 +126,11 @@ public class CheckoutPage extends BasePage{
         return secondItemInTheCartPrice.getText();
     }
 
+    @FindBy(css = ".error-message-container h3")
+    private WebElement errorMessage;
+
+    public String getErrorMessageText(){
+        return errorMessage.getText();
+    }
+
 }

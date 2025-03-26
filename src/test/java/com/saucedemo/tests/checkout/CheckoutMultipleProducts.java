@@ -9,15 +9,12 @@ import com.saucedemo.utils.ConfigReader;
 import com.saucedemo.utils.Constants;
 import com.saucedemo.utils.TestData;
 import com.saucedemo.utils.TextUtils;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import java.util.Map;
 
 public class CheckoutMultipleProducts extends BaseTest {
-    private static final Logger logger = LogManager.getLogger(CheckoutMultipleProducts.class);
 
     @Test
     public void testCheckoutMultipleProducts(){
