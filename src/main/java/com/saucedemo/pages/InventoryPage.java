@@ -8,6 +8,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -36,6 +37,15 @@ public class InventoryPage extends BasePage{
 
     @FindBy(className = "inventory_item_price")
     List<WebElement> productPrices;
+
+    public List<String> getAllPriceTexts(){
+        List<String> priceTextsList = new ArrayList<>();
+        for(WebElement price : productPrices){
+            String priceText = price.getText();
+            priceTextsList.add(priceText);
+        }
+        return priceTextsList;
+    }
 
     public String returnProductName(int i){
         return productNames.get(i).getText();
@@ -102,4 +112,6 @@ public class InventoryPage extends BasePage{
         return shoppingCartNotificationBadge.getText();
     }
 
+    @FindBy(className = "product_sort_container")
+    public WebElement sortingDropdown;
 }
