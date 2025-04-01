@@ -12,6 +12,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.stream.Collectors;
 
 public class InventoryPage extends BasePage{
     private static final Logger logger = LogManager.getLogger(InventoryPage.class);
@@ -45,6 +46,12 @@ public class InventoryPage extends BasePage{
             priceTextsList.add(priceText);
         }
         return priceTextsList;
+    }
+
+    public List<String> getAllProductNames() {
+        return productNames.stream()
+                .map(WebElement::getText)
+                .collect(Collectors.toList());
     }
 
     public String returnProductName(int i){

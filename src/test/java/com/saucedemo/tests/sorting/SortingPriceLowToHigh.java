@@ -13,12 +13,13 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-public class SortingPriceHighToLow extends BaseTest {
-    @Test(dataProvider = "successfulLoginData", dataProviderClass = DataProviders.class)
-    public void testSortingPriceHighToLow(String username, String password){
-        int indexOptionForPriceHighToLow = 3;
+public class SortingPriceLowToHigh extends BaseTest {
 
-        test.info("▶ Starting test: Sorting - Price high to low");
+    @Test(dataProvider = "successfulLoginData", dataProviderClass = DataProviders.class)
+    public void testSortingPriceLowToHigh(String username, String password){
+        int indexOptionForPriceHighToLow = 2;
+
+        test.info("▶ Starting test: Sorting - Price low to high");
 
         LoginPage loginPage = new LoginPage(driver);
         loginPage.loginIfNotLoggedIn(username, password);
@@ -28,7 +29,7 @@ public class SortingPriceHighToLow extends BaseTest {
         Select select = new Select(inventoryPage.sortingDropdown);
 
         select.selectByIndex(indexOptionForPriceHighToLow);
-        test.info("🔵 Price (High to low) sorting has been selected");
+        test.info("🔵 Price (Low to high) sorting has been selected");
 
         List<String> priceTexts = inventoryPage.getAllPriceTexts();
         test.info("📃 Sorting of prices: " + priceTexts);
@@ -36,7 +37,6 @@ public class SortingPriceHighToLow extends BaseTest {
         List<Float> actualPrices = TextUtils.convertToFloats(priceTexts);
         List<Float> expectedPrices = new ArrayList<>(actualPrices);
         Collections.sort(expectedPrices);
-        Collections.reverse(expectedPrices);
         Assert.assertEquals(actualPrices, expectedPrices);
         test.info("🎉 Prices are properly sorted from high to low!");
     }
