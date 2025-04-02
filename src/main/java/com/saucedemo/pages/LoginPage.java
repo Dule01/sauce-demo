@@ -52,7 +52,7 @@ public class LoginPage extends BasePage{
         return errorMessage.getText();
     }
 
-    public void loginIfNotLoggedIn(String username, String password){
+    public void loginIfNotLoggedIn(String username, String password) throws InterruptedException {
         if(!driver.getCurrentUrl().contains("inventory.html")){
             login(username, password);
             logger.info("Logged in user: {}", username);

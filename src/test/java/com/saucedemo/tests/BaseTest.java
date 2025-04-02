@@ -31,16 +31,16 @@ public class BaseTest {
     protected Properties config;
     private static final Logger logger = LogManager.getLogger(BaseTest.class);
     protected static ExtentReports extent;
-    protected static ExtentTest test;
+
 
     @BeforeSuite
     public void setupExtentReports() {
         extent = ExtentManager.getInstance();
     }
 
-    @BeforeMethod
+    @BeforeMethod(alwaysRun = true)
     public void setup(Method method) throws IOException {
-        test = ExtentManager.createTest(method.getName());
+        ExtentManager.createTest(method.getName());
 
         logger.info("Launching the test environment...");
         config = new Properties();
@@ -48,48 +48,69 @@ public class BaseTest {
         config.load(fis);
 
         String browser = config.getProperty("browser");
+        boolean isHeadless = Boolean.parseBoolean(config.getProperty("headless", "false"));
 
         logger.info("Selected browser: " + browser);
+        logger.info("Headless mode: " + isHeadless);
+
         switch (browser.toLowerCase()) {
             case "firefox":
                 FirefoxOptions firefoxOptions = new FirefoxOptions();
                 firefoxOptions.addArguments("-private");
-                driver = new FirefoxDriver();
+                if (isHeadless) {
+                    firefoxOptions.addArguments("--headless");
+                    firefoxOptions.addArguments("--width=1920");
+                    firefoxOptions.addArguments("--height=1080");
+                }
+                driver = new FirefoxDriver(firefoxOptions);
                 break;
+
             case "edge":
                 EdgeOptions edgeOptions = new EdgeOptions();
                 edgeOptions.addArguments("--inprivate");
-                driver = new EdgeDriver();
+                if (isHeadless) {
+                    edgeOptions.addArguments("--headless=new"); // koristi novi engine
+                    edgeOptions.addArguments("--window-size=1920,1080");
+                }
+                driver = new EdgeDriver(edgeOptions);
                 break;
+
             case "chrome":
                 ChromeOptions chromeOptions = new ChromeOptions();
                 chromeOptions.addArguments("--incognito");
-                driver = new ChromeDriver();
+                if (isHeadless) {
+                    chromeOptions.addArguments("--headless=new"); // preporučeno od Chrome 109+
+                    chromeOptions.addArguments("--window-size=1920,1080");
+                }
+                driver = new ChromeDriver(chromeOptions);
                 break;
+
+            default:
+                throw new IllegalArgumentException("❌ Unsupported browser: " + browser);
         }
 
         driver.manage().window().maximize();
         driver.get(config.getProperty("baseUrl"));
         logger.info("URL to navigate to: " + config.getProperty("baseUrl"));
-
     }
 
-    @AfterMethod
+
+    @AfterMethod(alwaysRun = true)
     public void tearDown(ITestResult result) {
         if (result.getStatus() == ITestResult.FAILURE) {
             logger.error("Test failed: " + result.getThrowable());
-            test.fail("Test failed: " + result.getThrowable());
+            ExtentManager.getTest().fail("Test failed: " + result.getThrowable());
 
             // Getting screenshot
             String screenshotPath = ScreenshotUtils.captureScreenshot(driver, result.getName());
 
             // Add screenshot to Extent Report
-            test.fail("Screenshot: ", MediaEntityBuilder.createScreenCaptureFromPath("../" + screenshotPath).build());
+            ExtentManager.getTest().fail("Screenshot: ", MediaEntityBuilder.createScreenCaptureFromPath("../" + screenshotPath).build());
 
         } else if (result.getStatus() == ITestResult.SUCCESS) {
-            test.pass("Test successful!");
+            ExtentManager.getTest().pass("Test successful!");
         } else {
-            test.skip("Test skipped");
+            ExtentManager.getTest().skip("Test skipped");
         }
         if (driver != null) {
             logger.info("Closing the browser...");
@@ -97,7 +118,7 @@ public class BaseTest {
         }
     }
 
-    @AfterSuite
+    @AfterSuite(alwaysRun = true)
     public void flushReports() {
         ExtentManager.flushReports();
     }
