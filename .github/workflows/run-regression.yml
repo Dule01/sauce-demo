@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  smoke:
+  regression:
     runs-on: ubuntu-latest
 
     steps:
