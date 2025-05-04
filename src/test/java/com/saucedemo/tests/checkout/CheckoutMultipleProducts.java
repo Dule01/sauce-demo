@@ -1,5 +1,6 @@
 package com.saucedemo.tests.checkout;
-
+import java.util.List;
+import java.util.Collections;
 import com.saucedemo.pages.CartPage;
 import com.saucedemo.pages.CheckoutPage;
 import com.saucedemo.pages.InventoryPage;
@@ -38,7 +39,8 @@ public class CheckoutMultipleProducts extends BaseTest {
         ExtentManager.getTest().info("🛒 First product added to cart: " + selectedProduct + " | Price: " + selectedProductPrice);
 
         // Add second product to cart
-        Map<String, String> secondProductDetails = inventoryPage.clickAddToCartOnAnyProduct();
+        List<String> excluded = Collections.singletonList(selectedProduct);
+        Map<String, String> secondProductDetails = inventoryPage.clickAddToCartOnAnyProductExcluding(excluded);
         String secondSelectedProduct = secondProductDetails.get("name");
         String secondSelectedProductPrice = secondProductDetails.get("price");
         ExtentManager.getTest().info("🛒 Second product added to cart: " + secondSelectedProduct + " | Price: " + secondSelectedProductPrice);
@@ -74,7 +76,8 @@ public class CheckoutMultipleProducts extends BaseTest {
         float taxPrice = TextUtils.extractPrice(checkoutPage.getTaxPriceText());
         float finalTotalPrice = productPrice + secondProductPrice;
         finalTotalPrice += taxPrice;
-        Assert.assertEquals(checkoutPage.getOverviewTotalPriceText(), "Total: $" + finalTotalPrice);
+        String expectedTotal = String.format("Total: $%.2f", finalTotalPrice);
+        Assert.assertEquals(checkoutPage.getOverviewTotalPriceText(), expectedTotal);
         ExtentManager.getTest().info("💰 Total price validated: $" + finalTotalPrice);
 
         // Finish order

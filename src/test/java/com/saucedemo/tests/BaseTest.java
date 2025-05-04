@@ -47,8 +47,8 @@ public class BaseTest {
         FileInputStream fis = new FileInputStream("src/test/resources/config.properties");
         config.load(fis);
 
-        String browser = config.getProperty("browser");
-        boolean isHeadless = Boolean.parseBoolean(config.getProperty("headless", "false"));
+        String browser = System.getProperty("browser", config.getProperty("browser"));
+        boolean isHeadless = Boolean.parseBoolean(System.getProperty("headless", config.getProperty("headless", "false")));
 
         logger.info("Selected browser: " + browser);
         logger.info("Headless mode: " + isHeadless);

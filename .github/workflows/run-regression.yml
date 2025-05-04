@@ -1,0 +1,26 @@
+name: Run Regression Tests
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  smoke:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+
+      - name: Set up Java
+        uses: actions/setup-java@v3
+        with:
+          java-version: '17'
+
+      - name: Run Regression Tests (Chrome Headless)
+        run: |
+          mvn clean test \
+            -Dsurefire.suiteXmlFiles=src/test/resources/testng/regression-tests.xml \
+            -Dbrowser=chrome \
+            -Dheadless=true
